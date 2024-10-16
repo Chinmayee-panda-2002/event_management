@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Event Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .dashboard-header h2 {
+            color: white;
+            margin: 0;
+        }
+
+        .create-event-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1em;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .create-event-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .event-card {
+            background: linear-gradient(45deg, #ffffff, #f0f0f0);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 5px solid #007bff;
+        }
+
+        .event-content {
+            padding: 20px;
+        }
+
+        .event-title {
+            font-size: 1.5em;
+            margin: 0;
+            color: #007bff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .event-date, .event-time, .event-location, .event-price {
+            color: #666;
+            margin: 8px 0;
+            font-style: italic;
+        }
+
+        .event-description {
+            color: #444;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .event-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .event-button:hover {
+            background: linear-gradient(to right, #764ba2, #667eea);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Dashboard</h1>
+
+    <div class="dashboard-header">
+        <h2>Upcoming Events</h2>
+        <a href="create-event.html" class="create-event-button">Create Event</a>
+    </div>
+
+    <div id="dashboard" class="dashboard">
+        <!-- Event cards will be dynamically generated here -->
+    </div>
+
+    <script src="js/event2.js"></script>
+    <script src="js/ticket.js"></script>
+</body>
+</html>

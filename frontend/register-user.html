@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration - Event Management System</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* User Registration Section */
+        .user-registration {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-registration h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
+            color: #333;
+        }
+
+        .user-registration form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-registration label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .user-registration input {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .user-registration button {
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .user-registration button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">EventManage</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="user-registration">
+        <h1>User Registration</h1>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Register</button>
+        </form>
+         <!-- Sign in link -->
+         <div class="sign-in-link">
+            <p>Already have an account? <a href="user-login.html" style="color: blue;">Sign in here</a>.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 EventManage. All rights reserved.</p>
+    </footer>
+    <script src="js/auth.js"></script>
+</body>
+</html>

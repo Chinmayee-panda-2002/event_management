@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header and Navigation */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 1rem;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .btn-register {
+            background-color: #ff6b6b;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-image: url('./views/1614850200542.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .btn-main {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 4rem 2rem;
+            background-color: #f4f4f4;
+        }
+        .features-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature {
+            flex-basis: 30%;
+            background-color: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .feature h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Events Section */
+        .events-section {
+            padding: 4rem 2rem;
+        }
+        .events-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .events {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .event {
+            flex-basis: 30%;
+            background-color: #f4f4f4;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+        }
+        .event h3 {
+            margin-bottom: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .contact-section h2 {
+            margin-bottom: 1rem;
+        }
+        .btn-contact {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">EventManage</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#events">Discover Events</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="register-user.html" class="btn-register">Register</a></li>
+                <li><a href="organizer-login.html" class="btn-register">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to EventManage</h1>
+            <p>Manage your events effortlessly, discover new events, and get your tickets instantly.</p>
+            <a href="#features" class="btn-main">Explore Features</a>
+        </div>
+    </div>
+
+    <section id="features" class="features-section">
+        <h2>Our Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Event Creation</h3>
+                <p>Create and manage your events easily with our user-friendly interface.</p>
+            </div>
+            <div class="feature">
+                <h3>Event Discovery</h3>
+                <p>Discover exciting events happening near you or online.</p>
+            </div>
+            <div class="feature">
+                <h3>Ticketing</h3>
+                <p>Secure your spot with fast and easy ticket booking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="events-section">
+        <h2>Discover Events</h2>
+        <div class="events">
+            <div class="event">
+                <h3>Music Concert</h3>
+                <p>Join the most awaited music concert of the year!</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+            <div class="event">
+                <h3>Tech Conference</h3>
+                <p>Learn the latest in tech innovations and network with industry leaders.</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+            <div class="event">
+                <h3>Art Workshop</h3>
+                <p>Unleash your creativity in our fun and interactive art workshop.</p>
+                <a href="#" class="btn">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need support, feel free to reach out to us!</p>
+        <a href="mailto:admin@example.com" class="btn-contact">Email Us</a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 EventManage. All rights reserved.</p>
+    </footer>
+</body>
+</html>

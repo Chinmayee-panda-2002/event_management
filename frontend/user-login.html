@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - Event Management System</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            padding: 15px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* Login Form Section */
+        .login-form {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-form h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
+            color: #333;
+        }
+
+        .login-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .login-form input {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .login-form button {
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">EventManage</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./register-user.html">Back to Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-form">
+        <h1>User Login</h1>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="forgot-password">
+                <a href="forgot_password.html">Forgot Password?</a>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 EventManage. All rights reserved.</p>
+    </footer>
+    <script src="js/auth.js"></script>
+</body>
+</html>

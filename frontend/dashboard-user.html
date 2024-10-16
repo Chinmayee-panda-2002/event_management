@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #4a4a4a;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .dashboard-header h2 {
+            color: white;
+            margin: 0;
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #ff5e62;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1em;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .logout-button:hover {
+            background-color: #e04a50;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .dashboard-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .all-events, .purchased-events {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .event-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .event-card {
+            background: linear-gradient(45deg, #ffffff, #f0f0f0);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 3px solid #007bff;
+        }
+
+        .event-content {
+            padding: 15px;
+        }
+
+        .event-title {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            color: #007bff;
+        }
+
+        .event-details {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .event-button {
+            display: inline-block;
+            padding: 8px 15px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .event-button:hover {
+            background: linear-gradient(to right, #764ba2, #667eea);
+            transform: translateY(-2px);
+        }
+
+        #search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        #search-bar:focus {
+            outline: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Dashboard</h1>
+
+    <div class="dashboard-header">
+        <h2>Welcome, User!</h2>
+        <a href="user-login.html" class="logout-button">Logout</a>
+    </div>
+
+    <input type="text" id="search-bar" placeholder="Search for events..." onkeyup="filterEvents()">
+
+    <div class="dashboard-container">
+        <div class="all-events">
+            <h2>All Events</h2>
+            <div id="dashboard" class="event-list">
+                <!-- All event cards will be dynamically generated here -->
+            </div>
+        </div>
+        <div class="purchased-events">
+            <h2>Purchased Events</h2>
+            <div id="purchased-events" class="event-list">
+                <!-- Purchased event cards will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/event.js"></script>
+</body>
+</html>
